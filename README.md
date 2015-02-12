@@ -1,6 +1,6 @@
 # java-spring-demo
 
-This is demo app created by  <a  href="#">Iotasol Pvt Ltd</a>
+This is demo app created by  <a  href="http://iotasol.com/">Iotasol Pvt Ltd</a>
 
 <h3>Technology Used</h3>
 
@@ -33,4 +33,4 @@ This is demp app which created using maven,Spring mvc with annotation based proj
 
 Thanks,
 <br>
-Iotasol Pvt Ltd
+<a  href="http://iotasol.com/">Iotasol Pvt Ltd</a>
