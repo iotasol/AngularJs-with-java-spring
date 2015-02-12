@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.service.security.SecurityInfoProvider;
 
@@ -30,14 +29,11 @@ public class CommonPageController {
 	 * @return ModelAndView
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView welcome() {
+	public String welcome() {
 
-		ModelAndView model = new ModelAndView();
 		if (securityInfoProvider.getCurrentUser() != null) {
-			model.setViewName("userHome");
-			return model;
+			return "redirect:user";
 		}
-		model.setViewName("welcome");
-		return model;
+		return "welcome";
 	}
 }
