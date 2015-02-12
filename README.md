@@ -19,7 +19,7 @@ This is demo app created by  <a  href="#">Iotasol Pvt Ltd</a>
     <br>
     <li><a  href="#">Log4j2</a></li>
     <br>
-    <li><a  href="#">jQuery/a></li>
+    <li><a  href="#">jQuery</a></li>
     <br>
     <li><a  href="#">Bootstrap 3.3.2</a></li>
     <br>
