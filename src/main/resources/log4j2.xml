@@ -10,7 +10,6 @@
 		<Logger name="com.demo.image" level="error" />
 		<Logger name="com.demo.util.MethodLogger" level="error" />
 		<Logger name="com.demo.repository.tenant" level="debug" />
-		<Logger name="com.demo.dataload" level="debug" />
 		<Logger name="org.springframework.security" level="error" />
 
 		<Logger name="org.hibernate.SQL" level="error" />

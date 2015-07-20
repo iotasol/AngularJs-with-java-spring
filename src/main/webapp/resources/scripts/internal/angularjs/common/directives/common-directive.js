@@ -5,7 +5,7 @@ var commonDirectives = angular.module('common-directives');
 commonDirectives.directive('loginPageDirective',function() {
 	return {
 		restrict : 'EA',
-		templateUrl : "/resources/scripts/internal/angularjs/common/directives/templates/login-page-template.html",
+		templateUrl : "resources/scripts/internal/angularjs/common/directives/templates/login-page-template.html",
 		link : function(scope, element, attrs) {
 		},
 		scope : {},
@@ -24,7 +24,7 @@ commonDirectives.directive('loginPageDirective',function() {
 					return;
 				}
 				var data ="j_username=" + $scope.username.toLowerCase() +"&j_password=" + $scope.password +"&_spring_security_remember_me=false&submit=Login";
-				$http.post('/app/authentication', data, {
+				$http.post('app/authentication', data, {
                  // Set Header
                   headers: {
                      // Set Content-Type in header
@@ -35,7 +35,7 @@ commonDirectives.directive('loginPageDirective',function() {
                 })
                 // Success Function
                 .success(function (data, status, headers, config) {
-                	window.location.href="/user";
+                	window.location.href="user";
                 })
                 //Error Function 
                 .error(function (data, status, headers, config) {
@@ -52,7 +52,7 @@ commonDirectives.directive('loginPageDirective',function() {
 commonDirectives.directive('navBarDirective',function() {
 	return {
 		restrict : 'EA',
-		templateUrl : "/resources/scripts/internal/angularjs/common/directives/templates/nav-bar-template.html",
+		templateUrl : "resources/scripts/internal/angularjs/common/directives/templates/nav-bar-template.html",
 		link : function(scope, element, attrs) {
 		},
 		scope : {},

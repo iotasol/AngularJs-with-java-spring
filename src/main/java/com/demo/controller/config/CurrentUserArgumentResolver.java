@@ -8,14 +8,12 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
-import com.demo.security.LoggedOnUser;
-
 public class CurrentUserArgumentResolver implements
 		HandlerMethodArgumentResolver {
 
 	@Override
 	public boolean supportsParameter(MethodParameter parameter) {
-		return parameter.getParameterType().equals(LoggedOnUser.class);
+		return false;
 	}
 
 	@Override

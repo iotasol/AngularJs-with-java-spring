@@ -7,7 +7,7 @@ commonServices.factory('AuthenticationSharedService', [ '$rootScope', '$http', f
 			// GET:- Check authenticate Method
 			authenticate : function() {
 				// get Call to check authenticate
-				$http.get('/api/user/authenticate')
+				$http.get('api/user/authenticate')
 				// Success function
 				.success(function(data, status, headers, config) {
 					$rootScope.data = data;
@@ -22,22 +22,22 @@ commonServices.factory('AuthenticationSharedService', [ '$rootScope', '$http', f
 				});
 			},
 			logout: function () {
-                $http.get('/app/logout')
+                $http.get('app/logout')
                 .success(function(data, status, headers, config) {
-                	window.location.href="/";
+                	window.location.href="/DemoApp";
 				});
             }
 		};
 	} ]);
 commonServices.factory('Account',function($resource){		
-	return $resource('/api/user/account', {},{
+	return $resource('api/user/account', {},{
 		'get': {method:'GET', params:{}, isArray:false},
 	});
 });
 
 /*Product Service*/
 commonServices.factory('ProductService',function($resource){		
-	return $resource('/api/product/:id', {id:'@id'},{
+	return $resource('api/product/:id', {id:'@id'},{
 		'fetchAll': {method:'GET', params:{}, isArray:true},
 		'fetch': {method:'GET', params:{}, isArray:false},
 		'save': {method:'POST', params:{}, isArray:false},

@@ -12,8 +12,8 @@ angular.module('common-app', ['ngResource',
                                   ])
                               .config(['$routeProvider','$locationProvider', '$httpProvider', function($routeProvider,$locationProvider, $httpProvider) {
                               	 $routeProvider.
-                              	  	when('/', {templateUrl: '/resources/scripts/internal/angularjs/common/partials/index.html',   controller: 'ProductController'}).
-                              	    when('/about', {templateUrl: '/resources/scripts/internal/angularjs/common/partials/about.html',   controller: 'AboutController'}).
+                              	  	when('/', {templateUrl: 'resources/scripts/internal/angularjs/common/partials/index.html',   controller: 'ProductController'}).
+                              	    when('/about', {templateUrl: 'resources/scripts/internal/angularjs/common/partials/about.html',   controller: 'AboutController'}).
                               	    otherwise({redirectTo: '/'});
                               }])
                               .run(['$rootScope', '$location','AuthenticationSharedService','Account',
